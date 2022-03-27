@@ -1,0 +1,4 @@
+USER: code user, name, password, email
+ROLE: code role, role description
+
+POSSEDE, 0N ROLE, 11 USER

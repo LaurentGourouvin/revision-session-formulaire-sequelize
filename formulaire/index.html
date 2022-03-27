@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Révision sur les formulaires</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello les Blobs !</h1>
+        <p>Une petite session de révision en vocal sur comment faire les formulaires.</p>
+        <p>Le but ici est de comprendre la différence entre un formulaire de type
+            <ul>
+                <li>POST</li>
+                <li>GET</li>
+            </ul>
+        </p>
+
+        <h2>Formulaire avec le méthode GET</h2>
+
+        <form action="" method="GET">
+            <div class="sectionForm">
+                <label for="nom">Votre nom</label><br>
+                <input type="text" name="nom" id="nom" placeholder="Mettez votre nom">
+            </div>
+            <div class="sectionForm">
+                <label for="motdepasse">Votre mot de passe</label> <br>
+                <input type="password" name="motdepasse" id="motdepasse" placeholder="Mettez votre mot de passe">
+            </div>
+            <div class="sectionForm">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+            </div>
+        </form>
+
+
+        <h2>Formulaire avec le méthode POST</h2>
+            <p>Si vous n'utilisez pas de serveur qui gère les requêtes HTTP, le formulaire POST ne fonctionnera pas</p>
+            <p>
+                405 Method Not Allowed <br>
+                Le code de statut de réponse HTTP 405 Method Not Allowed indique que la méthode utilisée pour la requête est connue du serveur mais 
+                qu'elle n'est pas supportée par la ressource ciblée.<br>
+                Le serveur doit générer un en-tête Allow en cas de réponse 405, contenant la liste des méthodes supportées par la ressource ciblée.
+            </p>
+
+        <form action="/" method="POST">
+            <div class="sectionForm">
+                <label for="nom">Votre nom</label><br>
+                <input type="text" name="nom" id="nom" placeholder="Mettez votre nom">
+            </div>
+            <div class="sectionForm">
+                <label for="motdepasse">Votre mot de passe</label> <br>
+                <input type="password" name="motdepasse" id="motdepasse" placeholder="Mettez votre mot de passe">
+            </div>
+            <div class="sectionForm">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
