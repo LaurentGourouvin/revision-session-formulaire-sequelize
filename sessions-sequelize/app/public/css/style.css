@@ -1,0 +1,10 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #D6DBD2;
+    display: flex;
+    justify-content: center;
+}
+.sectionForm {
+    padding: .5rem;
+}

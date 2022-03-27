@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <title>Révision sur les formulaires</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion à la partie admin d'un site !</h1>
+        <a href="/"><input type="button" value="Accueil"></a>
+        <form action="/admin-sign-in" method="POST">
+            <div class="sectionForm">
+                <label for="nomPost">Votre nom</label><br>
+                <input type="text" name="name" id="nomPost" placeholder="Mettez votre nom">
+            </div>
+            <div class="sectionForm">
+                <label for="motdepasse_post">Votre mot de passe</label> <br>
+                <input type="password" name="password" id="motdepasse_post" placeholder="Mettez votre mot de passe">
+            </div>
+            <div class="sectionForm">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+            </div>
+            <% if(locals.checkErrors) { %>
+                <p>
+                    <ul>
+                       <% for(const errObject of checkErrors) { %>
+                        <li><%= errObject.message %></li>
+                        <% } %>
+                    </ul>
+                </p>
+            <% } %>
+        </form>
+        
+    </div>
+    
+</body>
+<script src="/js/prism.js"></script>
+</html>
